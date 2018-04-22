@@ -1,0 +1,1802 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>chicken_event</name>
+    <events>
+        <variable constant="0" name="best_second_chick" sid="603536452982670" static="0" type="number">0</variable>
+        <variable constant="0" name="best_minute_chick" sid="988185028133943" static="0" type="number">0</variable>
+        <event-group description="" sid="546045194405073" title="Puzzle_Chicken">
+            <sub-events>
+                <event-block sid="887322028983605">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="106411817106786" type="c1" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="460036017837285" type="c1">
+                            <param id="0" name="Width">111.781</param>
+                            <param id="1" name="Height">107.989</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="527190144299188">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="893642862019452" type="c1" />
+                        <condition id="1" name="Is overlapping another object" sid="252808312259736" type="c1">
+                            <param id="0" name="Object">one</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="885519185760635" type="c1">
+                            <param id="0" name="X">422.827</param>
+                            <param id="1" name="Y">176.12</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="530554020878699" type="c1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="860495312936586" type="c1" />
+                        <action id="-10" name="Add to" sid="992488442001731" type="System">
+                            <param id="0" name="Variable">Tracker</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="591180117873296" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="X">c1.ImagePointX(0)</param>
+                            <param id="3" name="Y">c1.ImagePointY(0)</param>
+                        </action>
+                        <action id="0" name="Play" sid="787274126645799" type="Audio">
+                            <param id="0" name="Audio file">correct</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="439655958387757">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="421274194552635" type="c1" />
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="741864325563377" type="c1">
+                            <param id="0" name="Object">one</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="318801132623554" type="c1">
+                            <param id="0" name="Width">55.016</param>
+                            <param id="1" name="Height">50.587</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="124715560766902" type="c1">
+                            <param id="0" name="X">284.65</param>
+                            <param id="1" name="Y">270.555</param>
+                        </action>
+                        <action id="0" name="Play" sid="454037508087823" type="Audio">
+                            <param id="0" name="Audio file">false</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="775500187109985">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="394384588489773" type="c2" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="306988653982662" type="c2">
+                            <param id="0" name="Width">103.922</param>
+                            <param id="1" name="Height">117.119</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="536054235186998">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="361392634338885" type="c2" />
+                        <condition id="1" name="Is overlapping another object" sid="309715750004509" type="c2">
+                            <param id="0" name="Object">two</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="575552647596301" type="c2">
+                            <param id="0" name="X">506.488</param>
+                            <param id="1" name="Y">179.314</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="349036330928360" type="c2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="693679330889717" type="c2" />
+                        <action id="-10" name="Add to" sid="570671174507321" type="System">
+                            <param id="0" name="Variable">Tracker</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="675037285953852" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="X">c2.ImagePointX(0)</param>
+                            <param id="3" name="Y">c2.ImagePointY(0)</param>
+                        </action>
+                        <action id="0" name="Play" sid="873750850045889" type="Audio">
+                            <param id="0" name="Audio file">correct</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="300650187487278">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="292092880131075" type="c2" />
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="156682309141667" type="c2">
+                            <param id="0" name="Object">two</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="221063934369205" type="c2">
+                            <param id="0" name="Width">51.398</param>
+                            <param id="1" name="Height">56.384</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="520619375232432" type="c2">
+                            <param id="0" name="X">146.649</param>
+                            <param id="1" name="Y">336.78</param>
+                        </action>
+                        <action id="0" name="Play" sid="433964465671102" type="Audio">
+                            <param id="0" name="Audio file">false</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="448172478017436">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="944057289901810" type="c3" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="145050671484626" type="c3">
+                            <param id="0" name="Width">129.639</param>
+                            <param id="1" name="Height">110.395</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="640432910578924">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="912561640094174" type="c3" />
+                        <condition id="1" name="Is overlapping another object" sid="151561647477440" type="c3">
+                            <param id="0" name="Object">three</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="563874031687746" type="c3">
+                            <param id="0" name="X">594.253</param>
+                            <param id="1" name="Y">176.674</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="336788399553099" type="c3">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="142389645766758" type="c3" />
+                        <action id="-10" name="Add to" sid="330744289910175" type="System">
+                            <param id="0" name="Variable">Tracker</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="298514874840166" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="X">c3.ImagePointX(0)</param>
+                            <param id="3" name="Y">c3.ImagePointY(0)</param>
+                        </action>
+                        <action id="0" name="Play" sid="590820766804990" type="Audio">
+                            <param id="0" name="Audio file">correct</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="170282145494137">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="358468843194585" type="c3" />
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="457953386263609" type="c3">
+                            <param id="0" name="Object">three</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="854656672508047" type="c3">
+                            <param id="0" name="Width">59.216</param>
+                            <param id="1" name="Height">52.149</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="323289467155317" type="c3">
+                            <param id="0" name="X">144.201</param>
+                            <param id="1" name="Y">267.286</param>
+                        </action>
+                        <action id="0" name="Play" sid="460143613042896" type="Audio">
+                            <param id="0" name="Audio file">false</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="810446030651462">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="489186677208056" type="c4" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="751599282420038" type="c4">
+                            <param id="0" name="Width">107.223</param>
+                            <param id="1" name="Height">108.872</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="769680978789628">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="532823627085375" type="c4" />
+                        <condition id="1" name="Is overlapping another object" sid="522149913457000" type="c4">
+                            <param id="0" name="Object">four</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="342670998362871" type="c4">
+                            <param id="0" name="X">689.234</param>
+                            <param id="1" name="Y">174.706</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="859174562275378" type="c4">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="110181743598787" type="c4" />
+                        <action id="-10" name="Add to" sid="130553083550728" type="System">
+                            <param id="0" name="Variable">Tracker</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="972124661174802" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="X">c4.ImagePointX(0)</param>
+                            <param id="3" name="Y">c4.ImagePointY(0)</param>
+                        </action>
+                        <action id="0" name="Play" sid="539421494462425" type="Audio">
+                            <param id="0" name="Audio file">correct</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="205251002172954">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="684065437662380" type="c4" />
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="963864276075371" type="c4">
+                            <param id="0" name="Object">four</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="496769188395791" type="c4">
+                            <param id="0" name="Width">49.025</param>
+                            <param id="1" name="Height">51.283</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="864128542206915" type="c4">
+                            <param id="0" name="X">81.799</param>
+                            <param id="1" name="Y">403.982</param>
+                        </action>
+                        <action id="0" name="Play" sid="639399123278713" type="Audio">
+                            <param id="0" name="Audio file">false</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="513844952431310">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="361279339305175" type="c5" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="232831002746132" type="c5">
+                            <param id="0" name="Width">101.805</param>
+                            <param id="1" name="Height">108.4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="926595017347643">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="785851992240315" type="c5" />
+                        <condition id="1" name="Is overlapping another object" sid="142212127918084" type="c5">
+                            <param id="0" name="Object">five</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="946576353341974" type="c5">
+                            <param id="0" name="X">770.409</param>
+                            <param id="1" name="Y">174.938</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="611599261964985" type="c5">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="187582758926858" type="c5" />
+                        <action id="-10" name="Add to" sid="804364310679394" type="System">
+                            <param id="0" name="Variable">Tracker</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="379461213433467" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="X">c5.ImagePointX(0)</param>
+                            <param id="3" name="Y">c5.ImagePointY(0)</param>
+                        </action>
+                        <action id="0" name="Play" sid="363539764024066" type="Audio">
+                            <param id="0" name="Audio file">correct</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="447338272050551">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="630204824030426" type="c5" />
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="456328904253988" type="c5">
+                            <param id="0" name="Object">five</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="540419532794409" type="c5">
+                            <param id="0" name="Width">46.425</param>
+                            <param id="1" name="Height">51.639</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="297236690066984" type="c5">
+                            <param id="0" name="X">115.331</param>
+                            <param id="1" name="Y">205.394</param>
+                        </action>
+                        <action id="0" name="Play" sid="225381196080289" type="Audio">
+                            <param id="0" name="Audio file">false</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="147102108097376">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="493606633228424" type="c6" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="387598296579711" type="c6">
+                            <param id="0" name="Width">116.871</param>
+                            <param id="1" name="Height">138.321</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="612372006539830">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="935435750401542" type="c6" />
+                        <condition id="1" name="Is overlapping another object" sid="928942701029278" type="c6">
+                            <param id="0" name="Object">six</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="337468641595047" type="c6">
+                            <param id="0" name="X">425.322</param>
+                            <param id="1" name="Y">272.065</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="838054554750049" type="c6">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="741795502843773" type="c6" />
+                        <action id="-10" name="Add to" sid="910091239324611" type="System">
+                            <param id="0" name="Variable">Tracker</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="513255605307054" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="X">c6.ImagePointX(0)</param>
+                            <param id="3" name="Y">c6.ImagePointY(0)</param>
+                        </action>
+                        <action id="0" name="Play" sid="441687482690389" type="Audio">
+                            <param id="0" name="Audio file">correct</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="976266306737229">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="495612281355499" type="c6" />
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="694088618141804" type="c6">
+                            <param id="0" name="Object">six</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="206805892378071" type="c6">
+                            <param id="0" name="Width">51.195</param>
+                            <param id="1" name="Height">59.997</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="435054774549722" type="c6">
+                            <param id="0" name="X">219.376</param>
+                            <param id="1" name="Y">402.499</param>
+                        </action>
+                        <action id="0" name="Play" sid="190410074799616" type="Audio">
+                            <param id="0" name="Audio file">false</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="431547661705285">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="156757432387231" type="c7" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="426311546945925" type="c7">
+                            <param id="0" name="Width">99.66</param>
+                            <param id="1" name="Height">121.219</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="326543812787700">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="461385033810564" type="c7" />
+                        <condition id="1" name="Is overlapping another object" sid="192175500938930" type="c7">
+                            <param id="0" name="Object">seven</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="210518351294416" type="c7">
+                            <param id="0" name="X">505.95</param>
+                            <param id="1" name="Y">272.401</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="971524131042103" type="c7">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="978355312703930" type="c7" />
+                        <action id="-10" name="Add to" sid="612353652701812" type="System">
+                            <param id="0" name="Variable">Tracker</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="886197791698723" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="X">c7.ImagePointX(0)</param>
+                            <param id="3" name="Y">c7.ImagePointY(0)</param>
+                        </action>
+                        <action id="0" name="Play" sid="457195880248846" type="Audio">
+                            <param id="0" name="Audio file">correct</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="580306847688288">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="447701213290879" type="c7" />
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="128906504744322" type="c7">
+                            <param id="0" name="Object">seven</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="945100052993064" type="c7">
+                            <param id="0" name="Width">46.908</param>
+                            <param id="1" name="Height">57.015</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="343904228120073" type="c7">
+                            <param id="0" name="X">182.835</param>
+                            <param id="1" name="Y">206.287</param>
+                        </action>
+                        <action id="0" name="Play" sid="925472690887699" type="Audio">
+                            <param id="0" name="Audio file">false</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="822152661365272">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="785499488002511" type="c8" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="630000339317888" type="c8">
+                            <param id="0" name="Width">123.634</param>
+                            <param id="1" name="Height">141.312</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="223021506292999">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="973210932412217" type="c8" />
+                        <condition id="1" name="Is overlapping another object" sid="783845016519830" type="c8">
+                            <param id="0" name="Object">eight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="663850234171236" type="c8">
+                            <param id="0" name="X">593.815</param>
+                            <param id="1" name="Y">277.571</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="186604232253994" type="c8">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="974276650286080" type="c8" />
+                        <action id="-10" name="Add to" sid="848913173988577" type="System">
+                            <param id="0" name="Variable">Tracker</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="301950632093494" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="X">c8.ImagePointX(0)</param>
+                            <param id="3" name="Y">c8.ImagePointY(0)</param>
+                        </action>
+                        <action id="0" name="Play" sid="244188000893527" type="Audio">
+                            <param id="0" name="Audio file">correct</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="711030785354510">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="175646639881007" type="c8" />
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="741152985007499" type="c8">
+                            <param id="0" name="Object">eight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="120347416711036" type="c8">
+                            <param id="0" name="Width">49.483</param>
+                            <param id="1" name="Height">57.359</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="267321591045032" type="c8">
+                            <param id="0" name="X">75.896</param>
+                            <param id="1" name="Y">265.5</param>
+                        </action>
+                        <action id="0" name="Play" sid="806865664544810" type="Audio">
+                            <param id="0" name="Audio file">false</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="867236137415311">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="711303259712480" type="c9" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="809678826785869" type="c9">
+                            <param id="0" name="Width">119.708</param>
+                            <param id="1" name="Height">143.969</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="716670518112117">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="982379563056977" type="c9" />
+                        <condition id="1" name="Is overlapping another object" sid="984860532812052" type="c9">
+                            <param id="0" name="Object">nine</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="270931361296326" type="c9">
+                            <param id="0" name="X">680.826</param>
+                            <param id="1" name="Y">277.341</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="463305705321070" type="c9">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="189722414173357" type="c9" />
+                        <action id="-10" name="Add to" sid="650772768289308" type="System">
+                            <param id="0" name="Variable">Tracker</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="963618413236610" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="X">c9.ImagePointX(0)</param>
+                            <param id="3" name="Y">c9.ImagePointY(0)</param>
+                        </action>
+                        <action id="0" name="Play" sid="757121446282975" type="Audio">
+                            <param id="0" name="Audio file">correct</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="159813895962730">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="210258446871669" type="c9" />
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="421511788318389" type="c9">
+                            <param id="0" name="Object">nine</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="359646542056142" type="c9">
+                            <param id="0" name="Width">49.094</param>
+                            <param id="1" name="Height">61.669</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="970169400742536" type="c9">
+                            <param id="0" name="X">151.328</param>
+                            <param id="1" name="Y">404.499</param>
+                        </action>
+                        <action id="0" name="Play" sid="545094684332707" type="Audio">
+                            <param id="0" name="Audio file">false</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="814161559253817">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="575301018546128" type="c10" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="878627106905750" type="c10">
+                            <param id="0" name="Width">113.011</param>
+                            <param id="1" name="Height">132.849</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="373930894224168">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="495219653610769" type="c10" />
+                        <condition id="1" name="Is overlapping another object" sid="580580849292639" type="c10">
+                            <param id="0" name="Object">ten</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="696037375068016" type="c10">
+                            <param id="0" name="X">763.995</param>
+                            <param id="1" name="Y">270.496</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="378653590650162" type="c10">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="599629825254016" type="c10" />
+                        <action id="-10" name="Add to" sid="962810062184172" type="System">
+                            <param id="0" name="Variable">Tracker</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="925543519489546" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="X">c10.ImagePointX(0)</param>
+                            <param id="3" name="Y">c10.ImagePointY(0)</param>
+                        </action>
+                        <action id="0" name="Play" sid="363516312641124" type="Audio">
+                            <param id="0" name="Audio file">correct</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="665144082701559">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="129802153891678" type="c10" />
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="428201483789177" type="c10">
+                            <param id="0" name="Object">ten</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="599268252677595" type="c10">
+                            <param id="0" name="Width">52.628</param>
+                            <param id="1" name="Height">62.83</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="431830545640924" type="c10">
+                            <param id="0" name="X">282.648</param>
+                            <param id="1" name="Y">332.239</param>
+                        </action>
+                        <action id="0" name="Play" sid="825881723027524" type="Audio">
+                            <param id="0" name="Audio file">false</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="280889414344073">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="182526775250194" type="c11" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="897743009117180" type="c11">
+                            <param id="0" name="Width">102.022</param>
+                            <param id="1" name="Height">128.7</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="502205759730799">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="855091966195476" type="c11" />
+                        <condition id="1" name="Is overlapping another object" sid="175623484217154" type="c11">
+                            <param id="0" name="Object">eleven</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="537421503890233" type="c11">
+                            <param id="0" name="X">418.103</param>
+                            <param id="1" name="Y">378.168</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="951846165162408" type="c11">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="269851436208661" type="c11" />
+                        <action id="-10" name="Add to" sid="836525659131899" type="System">
+                            <param id="0" name="Variable">Tracker</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="272426575082445" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="X">c11.ImagePointX(0)</param>
+                            <param id="3" name="Y">c11.ImagePointY(0)</param>
+                        </action>
+                        <action id="0" name="Play" sid="510567651426305" type="Audio">
+                            <param id="0" name="Audio file">correct</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="422164660319728">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="391991732625991" type="c11" />
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="110563991764367" type="c11">
+                            <param id="0" name="Object">eleven</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="465258352388686" type="c11">
+                            <param id="0" name="Width">45.375</param>
+                            <param id="1" name="Height">57.241</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="826291871970016" type="c11">
+                            <param id="0" name="X">285.459</param>
+                            <param id="1" name="Y">403.829</param>
+                        </action>
+                        <action id="0" name="Play" sid="231003257060687" type="Audio">
+                            <param id="0" name="Audio file">false</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="156208570543714">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="738670284619676" type="c12" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="646494428019136" type="c12">
+                            <param id="0" name="Width">118.241</param>
+                            <param id="1" name="Height">131.625</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="621068907394044">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="383691241544184" type="c12" />
+                        <condition id="1" name="Is overlapping another object" sid="105110714517280" type="c12">
+                            <param id="0" name="Object">twelve</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="459274819331223" type="c12">
+                            <param id="0" name="X">496.377</param>
+                            <param id="1" name="Y">376.54</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="660430014343018" type="c12">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="552383549300827" type="c12" />
+                        <action id="-10" name="Add to" sid="197012422552494" type="System">
+                            <param id="0" name="Variable">Tracker</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="887758721035372" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="X">c12.ImagePointX(0)</param>
+                            <param id="3" name="Y">c12.ImagePointY(0)</param>
+                        </action>
+                        <action id="0" name="Play" sid="469139753747456" type="Audio">
+                            <param id="0" name="Audio file">correct</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="657657486702056">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="372442883999477" type="c12" />
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="978100408762915" type="c12">
+                            <param id="0" name="Object">twelve</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="448147646826241" type="c12">
+                            <param id="0" name="Width">54.306</param>
+                            <param id="1" name="Height">59.01</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="846088477104614" type="c12">
+                            <param id="0" name="X">214.043</param>
+                            <param id="1" name="Y">267.394</param>
+                        </action>
+                        <action id="0" name="Play" sid="732537372734463" type="Audio">
+                            <param id="0" name="Audio file">false</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="282352198327725">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="271413309096553" type="c13" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="521236847221628" type="c13">
+                            <param id="0" name="Width">127.069</param>
+                            <param id="1" name="Height">126.421</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="706856392622197">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="705486683329038" type="c13" />
+                        <condition id="1" name="Is overlapping another object" sid="810942364617512" type="c13">
+                            <param id="0" name="Object">thirteen</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="866051278767778" type="c13">
+                            <param id="0" name="X">588.804</param>
+                            <param id="1" name="Y">379.563</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="656479217320519" type="c13">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="851200208368469" type="c13" />
+                        <action id="-10" name="Add to" sid="721952039106023" type="System">
+                            <param id="0" name="Variable">Tracker</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="262503310515546" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="X">c13.ImagePointX(0)</param>
+                            <param id="3" name="Y">c13.ImagePointY(0)</param>
+                        </action>
+                        <action id="0" name="Play" sid="883160052805799" type="Audio">
+                            <param id="0" name="Audio file">correct</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="213134585794834">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="755224883346674" type="c13" />
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="991689793020690" type="c13">
+                            <param id="0" name="Object">thirteen</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="391194276622043" type="c13">
+                            <param id="0" name="Width">53.024</param>
+                            <param id="1" name="Height">55.743</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="394361187818889" type="c13">
+                            <param id="0" name="X">214.93</param>
+                            <param id="1" name="Y">333.252</param>
+                        </action>
+                        <action id="0" name="Play" sid="887811584358542" type="Audio">
+                            <param id="0" name="Audio file">false</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="375064542918317">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="237457901234048" type="c14" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="436538721345201" type="c14">
+                            <param id="0" name="Width">107.367</param>
+                            <param id="1" name="Height">120.05</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="508606620005855">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="400894953504309" type="c14" />
+                        <condition id="1" name="Is overlapping another object" sid="865656346998488" type="c14">
+                            <param id="0" name="Object">fourteen</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="955407553841286" type="c14">
+                            <param id="0" name="X">680.95</param>
+                            <param id="1" name="Y">382.822</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="502132163042905" type="c14">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="784271566452033" type="c14" />
+                        <action id="-10" name="Add to" sid="434936567631541" type="System">
+                            <param id="0" name="Variable">Tracker</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="358588894756992" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="X">c14.ImagePointX(0)</param>
+                            <param id="3" name="Y">c14.ImagePointY(0)</param>
+                        </action>
+                        <action id="0" name="Play" sid="318882606752848" type="Audio">
+                            <param id="0" name="Audio file">correct</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="774923210229258">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="522647953715129" type="c14" />
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="381638874028078" type="c14">
+                            <param id="0" name="Object">fourteen</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="124408764695673" type="c14">
+                            <param id="0" name="Width">48.937</param>
+                            <param id="1" name="Height">56.326</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="391718285607862" type="c14">
+                            <param id="0" name="X">249.776</param>
+                            <param id="1" name="Y">204.653</param>
+                        </action>
+                        <action id="0" name="Play" sid="164013714503573" type="Audio">
+                            <param id="0" name="Audio file">false</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="190634654577894">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="686595449738574" type="c15" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="772062260933311" type="c15">
+                            <param id="0" name="Width">117.896</param>
+                            <param id="1" name="Height">133.341</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="540057280772614">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="496404311659303" type="c15" />
+                        <condition id="1" name="Is overlapping another object" sid="544575694594738" type="c15">
+                            <param id="0" name="Object">fifteen</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="988238888711685" type="c15">
+                            <param id="0" name="X">761.704</param>
+                            <param id="1" name="Y">375.833</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="961435738116158" type="c15">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="664846003394485" type="c15" />
+                        <action id="-10" name="Add to" sid="859901882114982" type="System">
+                            <param id="0" name="Variable">Tracker</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="643657699679145" type="System">
+                            <param id="0" name="Object to create">Particles</param>
+                            <param id="1" name="Layer">&quot;game&quot;</param>
+                            <param id="2" name="X">c15.ImagePointX(0)</param>
+                            <param id="3" name="Y">c15.ImagePointY(0)</param>
+                        </action>
+                        <action id="0" name="Play" sid="397426872436519" type="Audio">
+                            <param id="0" name="Audio file">correct</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="784572326633339">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="373760231378364" type="c15" />
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="120746567604776" type="c15">
+                            <param id="0" name="Object">fifteen</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="658710710856303" type="c15">
+                            <param id="0" name="Width">48.77</param>
+                            <param id="1" name="Height">54.761</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="225620943056028" type="c15">
+                            <param id="0" name="X">75.447</param>
+                            <param id="1" name="Y">330.322</param>
+                        </action>
+                        <action id="0" name="Play" sid="248149637065978" type="Audio">
+                            <param id="0" name="Audio file">false</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="436535249906647" title="Timer3">
+            <sub-events>
+                <event-block sid="972989147016983">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="742499227900302" type="System">
+                            <param id="0" name="Interval (seconds)">6.5</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="712338312035460" type="System">
+                            <param id="0" name="Variable">Tracker</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set volume" sid="488265391723161" type="Audio">
+                            <param id="0" name="Tag">&quot;bg&quot;</param>
+                            <param id="1" name="dB">-10</param>
+                        </action>
+                        <action id="0" name="Play" sid="860842289796955" type="Audio">
+                            <param id="0" name="Audio file">chick (2)</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="633637485355334">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="940810277919922" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="175255741309340" type="System">
+                            <param id="0" name="Variable">Tracker</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="696819933147534" type="System">
+                            <param id="0" name="Variable">FinalSecond</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="599557597948665">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="274965816872067" type="System">
+                            <param id="0" name="Variable">FinalSecond</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">60</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="482134330752363" type="System">
+                            <param id="0" name="Variable">Tracker</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="672206131919413" type="System">
+                            <param id="0" name="Variable">FinalSecond</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="415613874890941" type="System">
+                            <param id="0" name="Variable">FinalMinute</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="920726016853037">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="415481291816456" type="System">
+                            <param id="0" name="Variable">FinalSecond</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">60</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="222032969939433" type="System">
+                            <param id="0" name="Variable">Tracker</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="671229449463719" type="second2">
+                            <param id="0" name="Text">FinalSecond</param>
+                        </action>
+                        <action id="0" name="Set text" sid="162754342929279" type="minute2">
+                            <param id="0" name="Text">FinalMinute</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="446420149988730">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="449967567672183" type="System">
+                            <param id="0" name="Variable">Tracker</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="789005883607658" type="second2">
+                            <param id="0" name="Y">232.071</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="155127651274040" type="minute2">
+                            <param id="0" name="Y">232.071</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="464118652277375" type="colon">
+                            <param id="0" name="Y">232.071</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="791496142465704" type="minute1">
+                            <param id="0" name="Y">232.071</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="360349201287705" type="second1">
+                            <param id="0" name="Y">232.071</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="492602023729873" type="c1" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="626188358384985" type="c10" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="924684865626302" type="c11" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="800724162574082" type="c12" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="795810801440266" type="c13" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="192926269806934" type="c14" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="423567453780247" type="c15" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="667459648471074" type="c2" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="489474510243294" type="c3" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="954807340729460" type="c4" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="736740749548369" type="c5" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="721870761086002" type="c6" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="244673432970562" type="c7" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="266787276819757" type="c8" />
+                        <action id="-16" name="Set opacity" sid="536544630430761" type="Sprite3">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="953039344985481" type="c9" />
+                    </actions>
+                </event-block>
+                <event-block sid="777486666174176">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="965206731066346" type="System">
+                            <param id="0" name="Variable">FinalSecond</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="630816010890299" type="second1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="393035085509457">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="876561305278063" type="System">
+                            <param id="0" name="Variable">FinalSecond</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="949108575883769" type="second1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="624124101852347">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="258026453428207" type="System">
+                            <param id="0" name="Variable">FinalMinute</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="605879296291167" type="minute1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="239887327079895">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="810911127277701" type="System">
+                            <param id="0" name="Variable">FinalMinute</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="742467601855306" type="minute1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="875413580006208" title="Button3">
+            <sub-events>
+                <event-block sid="583151593194914">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="295259778823537" type="Mouse">
+                            <param id="0" name="Object">back</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="951271458278449" type="back">
+                            <param id="0" name="Width">65</param>
+                            <param id="1" name="Height">65</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="101457891533297">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="605011935260709" type="Mouse">
+                            <param id="0" name="Object">back</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="773430640074621" type="back">
+                            <param id="0" name="Width">59</param>
+                            <param id="1" name="Height">59</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="327204997852908">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="105762524325458" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">back</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="831648927043749" type="Audio">
+                            <param id="0" name="Audio file">mouse_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="258537171716670" type="System">
+                            <param id="0" name="Layout">menu</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="481685204866155" type="System">
+                            <param id="0" name="Variable">FinalSecond</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="179230333888291" type="System">
+                            <param id="0" name="Variable">FinalMinute</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="890114024005050" type="System">
+                            <param id="0" name="Variable">Tracker</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="735361170501873">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="613233695734656" type="Mouse">
+                            <param id="0" name="Object">ok</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="954892081397849" type="ok">
+                            <param id="0" name="Width">71.072</param>
+                            <param id="1" name="Height">32.673</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="659588137993122">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="140541359082056" type="Mouse">
+                            <param id="0" name="Object">ok</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="513621709186555" type="ok">
+                            <param id="0" name="Width">70.072</param>
+                            <param id="1" name="Height">31.673</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="501837858342136" title="highscore3">
+            <sub-events>
+                <event-block sid="524723107740073">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="914296554738376" type="System">
+                            <param id="0" name="Variable">Tracker</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">15</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="195180295482703" type="System">
+                            <param id="0" name="Variable">best_second_chick</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="954688418275782" type="System">
+                            <param id="0" name="Variable">best_minute_chick</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="790061826672595" type="System">
+                            <param id="0" name="Seconds">1.</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="855344796971170" type="System">
+                            <param id="0" name="Layer">&quot;highscore&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="871755707719894" type="ok">
+                            <param id="0" name="X">440.254</param>
+                            <param id="1" name="Y">357.609</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="706073756832504" type="Sprite6" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="603003114578528" type="star1" />
+                        <action id="-16" name="Wait" sid="842982237587718" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="712807701144746" type="star2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="625016675479720" type="star2" />
+                        <action id="-16" name="Wait" sid="592978722754911" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="841359926764810" type="star3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="417715013155368" type="star3" />
+                        <action id="-9" name="Set value" sid="139703185426518" type="System">
+                            <param id="0" name="Variable">best_minute_chick</param>
+                            <param id="1" name="Value">minute2.Text</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="944664640235163" type="System">
+                            <param id="0" name="Variable">best_second_chick</param>
+                            <param id="1" name="Value">second2.Text</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="123883694837220" type="System">
+                            <param id="0" name="Variable">user3</param>
+                            <param id="1" name="Value">nametxt.Text</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="392829773897707" type="Sprite3">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="982673267466858">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="768445400355966" type="System">
+                            <param id="0" name="Variable">Tracker</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">15</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="796094879713782" type="System">
+                            <param id="0" name="Variable">FinalMinute</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">best_minute_chick</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="460535130199861" type="System">
+                            <param id="0" name="Variable">FinalSecond</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">best_second_chick</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="991512533833218" type="System">
+                            <param id="0" name="Seconds">1.</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="431551046318474" type="System">
+                            <param id="0" name="Layer">&quot;highscore&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="120722554361715" type="ok">
+                            <param id="0" name="X">440.254</param>
+                            <param id="1" name="Y">357.609</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="870103715486296" type="Sprite6" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="908229657626683" type="star1" />
+                        <action id="-16" name="Wait" sid="872716623494824" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="468364647181191" type="star2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="798056352300677" type="star2" />
+                        <action id="-16" name="Wait" sid="122661072395047" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="578671334707091" type="star3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="881380700714205" type="star3" />
+                        <action id="-9" name="Set value" sid="300513430947807" type="System">
+                            <param id="0" name="Variable">best_minute_chick</param>
+                            <param id="1" name="Value">minute2.Text</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="544165346861000" type="System">
+                            <param id="0" name="Variable">best_second_chick</param>
+                            <param id="1" name="Value">second2.Text</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="688462892565213" type="System">
+                            <param id="0" name="Variable">user3</param>
+                            <param id="1" name="Value">nametxt.Text</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="703154789455099" type="Sprite3">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="456321530997751">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="776828956702338" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Check item exists" sid="367978641038149" type="LocalStorage">
+                            <param id="0" name="Key">&quot;best_minute_chick&quot;</param>
+                        </action>
+                        <action id="5" name="Check item exists" sid="508412607832838" type="LocalStorage">
+                            <param id="0" name="Key">&quot;best_second_chick&quot;</param>
+                        </action>
+                        <action id="5" name="Check item exists" sid="420394518003916" type="LocalStorage">
+                            <param id="0" name="Key">&quot;best_chick_name&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="664746300044749" type="System">
+                            <param id="0" name="Variable">FinalMinute</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="141945611402998" type="System">
+                            <param id="0" name="Variable">FinalSecond</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="762722061095952" type="System">
+                            <param id="0" name="Layer">&quot;congrats&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="315667054775869" type="System">
+                            <param id="0" name="Layer">&quot;highscore&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="912899030050972" type="System">
+                            <param id="0" name="Variable">Tracker</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="538881659900372">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="755035914414130" type="LocalStorage">
+                            <param id="0" name="Key">&quot;best_chick_name&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="618871868504279" type="System">
+                            <param id="0" name="Variable">user3</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="653021788951472">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="704774241710669" type="LocalStorage">
+                            <param id="0" name="Key">&quot;best_minute_chick&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="671032044079054" type="System">
+                            <param id="0" name="Variable">best_minute_chick</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="165048486160472">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="493815965028902" type="LocalStorage">
+                            <param id="0" name="Key">&quot;best_second_chick&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="294320646069360" type="System">
+                            <param id="0" name="Variable">best_second_chick</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="430966998141788">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="747884314458659" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">ok</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="368900419455095" type="Audio">
+                            <param id="0" name="Audio file">mouse_click</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="177504956173465" type="System">
+                            <param id="0" name="Layout">menu</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="853220209015936" type="System">
+                            <param id="0" name="Variable">user3</param>
+                            <param id="1" name="Value">nametxt.Text</param>
+                        </action>
+                        <action id="0" name="Set item" sid="944373137248687" type="LocalStorage">
+                            <param id="0" name="Key">&quot;best_chick_name&quot;</param>
+                            <param id="1" name="Value">user3</param>
+                        </action>
+                        <action id="0" name="Set item" sid="530848873874595" type="LocalStorage">
+                            <param id="0" name="Key">&quot;best_minute_chick&quot;</param>
+                            <param id="1" name="Value">best_minute_chick</param>
+                        </action>
+                        <action id="0" name="Set item" sid="128718406260046" type="LocalStorage">
+                            <param id="0" name="Key">&quot;best_second_chick&quot;</param>
+                            <param id="1" name="Value">best_second_chick</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="963466489193650" type="System">
+                            <param id="0" name="Layer">&quot;highscore&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="562501228141693" type="System">
+                            <param id="0" name="Variable">startGame</param>
+                            <param id="1" name="Value">&quot;no&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="174510944877971">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="569984568345876" type="System">
+                            <param id="0" name="Variable">Tracker</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">15</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="867701707123336" type="System">
+                            <param id="0" name="Variable">FinalMinute</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">best_minute_chick</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="631633898391257" type="System">
+                            <param id="0" name="Variable">FinalSecond</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">best_second_chick</param>
+                        </condition>
+                        <condition id="-14" inverted="1" name="Compare variable" sid="146583798545277" type="System">
+                            <param id="0" name="Variable">best_second_chick</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="993751664584263" type="second2">
+                            <param id="0" name="Y">270</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="767017289118082" type="minute2">
+                            <param id="0" name="Y">270</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="679879712160953" type="minute1">
+                            <param id="0" name="Y">270</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="314896249769632" type="second1">
+                            <param id="0" name="Y">270</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="544716780276474" type="colon">
+                            <param id="0" name="Y">270</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="816373867053976" type="System">
+                            <param id="0" name="Seconds">1.</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="733600611402383" type="Sprite3">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="859710314635718" type="System">
+                            <param id="0" name="Layer">&quot;congrats&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="771489434183596" type="txtCongrats" />
+                        <action id="-16" name="Wait" sid="858075276929974" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="758660763472027" type="ok">
+                            <param id="0" name="X">183.157</param>
+                            <param id="1" name="Y">342.012</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="174409712345237">
+                    <conditions>
+                        <condition behavior="Fade" id="1" name="On fade-in finished" sid="184527074848760" type="star1" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="918306620948010" type="Audio">
+                            <param id="0" name="Audio file">kids cheering</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-0.5</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="561679919728220">
+                    <conditions>
+                        <condition behavior="Fade" id="1" name="On fade-in finished" sid="597653725372594" type="txtCongrats" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="161316697766907" type="Audio">
+                            <param id="0" name="Audio file">kids cheering</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-0.5</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="348421030641192" title="Volume4">
+            <sub-events>
+                <event-block sid="719555699879626">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="967862876526236" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Volume</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Toggle boolean" sid="744795847673428" type="Volume">
+                            <param id="0" name="Instance variable">SoundOn</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="543593541612329">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="410088767773222" type="Volume">
+                                    <param id="0" name="Instance variable">SoundOn</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set muted" sid="523245421212935" type="Audio">
+                                    <param id="0" name="Tag">&quot;bg&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="901242465656073" type="Volume">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="342920412167637" type="System">
+                                    <param id="0" name="Variable">Sound</param>
+                                    <param id="1" name="Value">&quot;on&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="241258872235842">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="468541330650224" type="Volume">
+                                    <param id="0" name="Instance variable">SoundOn</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set muted" sid="111017804882374" type="Audio">
+                                    <param id="0" name="Tag">&quot;bg&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="354766582744401" type="Volume">
+                                    <param id="0" name="Animation">&quot;mute&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="244543733887605" type="System">
+                                    <param id="0" name="Variable">Sound</param>
+                                    <param id="1" name="Value">&quot;off&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="447569384657401">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="435421583731602" type="Mouse">
+                            <param id="0" name="Object">Volume</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="978524882348330" type="Volume">
+                            <param id="0" name="Width">65</param>
+                            <param id="1" name="Height">65</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="380184698171989">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Cursor is over object" sid="347393691261171" type="Mouse">
+                            <param id="0" name="Object">Volume</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="280258785947895" type="Volume">
+                            <param id="0" name="Width">58.447</param>
+                            <param id="1" name="Height">58.447</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="649510245698709">
+                    <conditions>
+                        <condition id="-9" name="Layer is visible" sid="207013233350551" type="System">
+                            <param id="0" name="Layer">&quot;Layer 0&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="165911618155135" type="System">
+                            <param id="0" name="Variable">Sound</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;off&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set muted" sid="506454834604763" type="Audio">
+                            <param id="0" name="Tag">&quot;bg&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="298338613053930" type="Volume">
+                            <param id="0" name="Animation">&quot;mute&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="650758184473268" type="Volume">
+                            <param id="0" name="Instance variable">SoundOn</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="477944906744024">
+                    <conditions>
+                        <condition id="-9" name="Layer is visible" sid="318785036467949" type="System">
+                            <param id="0" name="Layer">&quot;Layer 0&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="755439027712565" type="System">
+                            <param id="0" name="Variable">Sound</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;on&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set muted" sid="868436132118863" type="Audio">
+                            <param id="0" name="Tag">&quot;bg&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="625580092209360" type="Volume">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="822514766984743" type="Volume">
+                            <param id="0" name="Instance variable">SoundOn</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
